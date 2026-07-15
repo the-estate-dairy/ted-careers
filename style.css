@@ -1,0 +1,258 @@
+/* The Estate Dairy careers site styles */
+
+:root {
+  --bg: #dfdbcb;
+  --ink: #3a3330;
+  --ink-soft: #5c534e;
+  --card: #f4f1e8;
+  --line: #c9c3b0;
+  --accent: #3a3330;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.label {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+header.site {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+header.site .brand {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+header.site h1 {
+  font-size: 34px;
+  font-weight: normal;
+  margin-top: 18px;
+  line-height: 1.25;
+}
+
+header.site .sub {
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+hr.rule {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 40px 0;
+}
+
+/* Job cards on the careers index */
+.job-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 28px 30px;
+  margin-bottom: 20px;
+}
+
+.job-card h2 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 6px 0 10px;
+}
+
+.job-card .meta {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+
+.job-card p { color: var(--ink-soft); }
+
+.btn {
+  display: inline-block;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #f4f1e8;
+  text-decoration: none;
+  padding: 13px 28px;
+  border: none;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+.btn:hover { background: #241f1d; }
+
+/* Job spec */
+.spec h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin: 38px 0 14px;
+}
+
+.spec p { margin-bottom: 14px; }
+
+.spec ul {
+  padding-left: 20px;
+  margin-bottom: 14px;
+}
+
+.spec li { margin-bottom: 8px; }
+
+.meta-block {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 22px 26px;
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 24px;
+}
+
+.meta-block div span.label { display: block; margin-bottom: 3px; }
+
+@media (max-width: 520px) {
+  .meta-block { grid-template-columns: 1fr; }
+}
+
+/* Application form */
+.apply {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 36px 34px;
+  margin-top: 48px;
+}
+
+.apply h2 {
+  font-size: 26px;
+  font-weight: normal;
+  margin-bottom: 6px;
+}
+
+.apply .intro {
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+}
+
+.field { margin-bottom: 22px; }
+
+.field label.label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--ink);
+}
+
+.field .hint {
+  font-size: 14px;
+  color: var(--ink-soft);
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.req { color: #8a4b3c; }
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  background: #fdfcf8;
+  border: 1px solid var(--line);
+  padding: 12px 14px;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 0;
+}
+
+textarea { min-height: 140px; resize: vertical; }
+
+input[type="file"] {
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.checkline {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.checkline input { margin-top: 5px; flex-shrink: 0; }
+
+.consent-box {
+  border-top: 1px solid var(--line);
+  margin-top: 30px;
+  padding-top: 24px;
+}
+
+.consent-box .label { margin-bottom: 14px; display: block; }
+
+footer.site {
+  margin-top: 70px;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+footer.site a { color: var(--ink-soft); }
+
+.notice {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 18px 22px;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+
+/* Privacy page */
+.prose h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin: 34px 0 12px;
+}
+
+.prose p, .prose ul { margin-bottom: 14px; }
+.prose ul { padding-left: 20px; }
+.prose li { margin-bottom: 6px; }
