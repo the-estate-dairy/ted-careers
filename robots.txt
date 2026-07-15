@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hellolaurenfeather-cell.github.io/ted-careers/sitemap.xml
